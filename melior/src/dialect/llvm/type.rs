@@ -2,7 +2,7 @@
 
 use crate::{
     context::Context,
-    ir::{Type, TypeLike},
+    ir::{r#type::IntegerType, Type, TypeLike},
 };
 use mlir_sys::{
     mlirLLVMArrayTypeGet, mlirLLVMFunctionTypeGet, mlirLLVMPointerTypeGet,
@@ -43,7 +43,12 @@ pub fn opaque_pointer(context: &Context) -> Type {
 
 /// Creates an LLVM pointer type in the given address space.
 pub fn pointer(context: &Context, address_space: u32) -> Type {
-    unsafe { Type::from_raw(mlirLLVMPointerTypeGet(context.to_raw(), address_space)) }
+    unsafe {
+        Type::from_raw(mlirLLVMPointerTypeGet(
+            IntegerType::new(context, 64).to_raw(),
+            address_space,
+        ))
+    }
 }
 
 /// Creates an LLVM struct type.

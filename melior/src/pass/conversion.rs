@@ -1,14 +1,14 @@
 //! Conversion passes.
 
 melior_macro::conversion_passes!(
-    mlirCreateConversionArithToArmSMEConversionPass,
+    // mlirCreateConversionArithToArmSMEConversionPass,
     mlirCreateConversionArithToLLVMConversionPass,
     mlirCreateConversionConvertAffineForToGPU,
     mlirCreateConversionConvertAffineToStandard,
     mlirCreateConversionConvertAMDGPUToROCDL,
     mlirCreateConversionConvertArithToSPIRV,
     mlirCreateConversionConvertArmNeon2dToIntr,
-    mlirCreateConversionConvertArmSMEToLLVM,
+    // mlirCreateConversionConvertArmSMEToLLVM,
     mlirCreateConversionConvertArmSMEToSCF,
     mlirCreateConversionConvertAsyncToLLVMPass,
     mlirCreateConversionConvertBufferizationToMemRef,
@@ -60,7 +60,7 @@ melior_macro::conversion_passes!(
     mlirCreateConversionTosaToArith,
     mlirCreateConversionTosaToLinalg,
     mlirCreateConversionTosaToLinalgNamed,
-    mlirCreateConversionTosaToMLProgram,
+    // mlirCreateConversionTosaToMLProgram,
     mlirCreateConversionTosaToSCF,
     mlirCreateConversionTosaToTensor,
     mlirCreateConversionUBToLLVMConversionPass,

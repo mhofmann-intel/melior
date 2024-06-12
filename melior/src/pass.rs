@@ -7,7 +7,8 @@ pub mod gpu;
 pub mod linalg;
 mod manager;
 mod operation_manager;
-pub mod sparse_tensor;
+// Missing from llvm-26eb428
+// pub mod sparse_tensor;
 pub mod transform;
 
 pub use self::{
